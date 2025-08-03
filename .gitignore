@@ -12,3 +12,5 @@ dist/
 *.png
 .vscode/
 phishing_email.csv
+.env
+

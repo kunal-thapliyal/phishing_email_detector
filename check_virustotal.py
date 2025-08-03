@@ -1,8 +1,10 @@
 import requests
 import time
+import os
+from dotenv import load_dotenv 
+load_dotenv()
 
-
-API_KEY = "5d7b8fcf3b81af7ea8fedb02592004deba4e16a2fabac9f697b43e00dc29e0f3" 
+API_KEY = os.getenv("VT_API_KEY")
 
 def check_url_virustotal(url):
     headers = {
@@ -13,21 +15,17 @@ def check_url_virustotal(url):
     try:
         print(f"Sending URL to VirusTotal for scanning...")
 
-        
         response = requests.post(scan_url, headers=headers, data={"url": url})
         print("Step 1 - POST status code:", response.status_code)
 
         if response.status_code != 200:
             return {"label": "VirusTotal Error"}
 
-        
         analysis_id = response.json()["data"]["id"]
         print("Step 2 - Analysis ID received:", analysis_id)
 
-        
         result_url = f"https://www.virustotal.com/api/v3/analyses/{analysis_id}"
 
-        
         for i in range(10):
             time.sleep(3)
             print(f"Step 3 - Waiting for result (try {i + 1})...")
@@ -36,11 +34,10 @@ def check_url_virustotal(url):
 
             stats = report["data"]["attributes"]["stats"]
             if stats["malicious"] + stats["suspicious"] > 0 or stats["undetected"] + stats["harmless"] > 0:
-                break 
+                break
 
         print("Step 4 - Stats:", stats)
 
-        
         if stats["malicious"] > 0 or stats["suspicious"] > 0:
             return {"label": "Phishing (by VirusTotal)"}
         else:
