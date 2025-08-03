@@ -1,0 +1,76 @@
+Time,Email Content,URL,ML Result,Confidence,VirusTotal Result
+2025-06-20 11:55:44.980203,"Dear John,
+
+Hope you are doing well. Please find the attached invoice for your recent purchase.
+
+Regards,  
+Amazon Billing Team  
+www.amazon.com
+",https://www.amazon.com,Safe (by ML),50.61,Safe (by VirusTotal)
+2025-06-20 11:57:13.401383,"Your PayPal account has been limited!  
+Click the link below to verify your identity or your account will be closed:  
+http://login-verification-paypal.com
+
+Thank you,  
+PayPal Security Team
+",http://login-verification-paypal.com,Phishing (by ML),63.13,Phishing (by VirusTotal)
+2025-06-20 11:57:36.107571,,http://badsite.com/phish-login,No email content provided,N/A,Phishing (by VirusTotal)
+2025-06-20 11:58:15.136536,"Hi team,
+
+Please join the meeting at 3 PM using the Zoom link. Let me know if anyone needs the agenda.
+
+Thanks,  
+Project Manager  
+https://zoom.us
+",https://zoom.us,Safe (by ML),59.61,Safe (by VirusTotal)
+2025-06-20 11:58:31.878379,"Congratulations! You've won a new iPhone. To claim your prize, please respond with your full name, address, and bank details.
+
+Act now!
+",,Phishing (by ML),56.4,No URL provided
+2025-06-20 11:59:06.670207,,https://www.wikipedia.org,No email content provided,N/A,Safe (by VirusTotal)
+2025-07-01 11:49:26.868205,"Dear user, your account has been flagged for suspicious activity.  
+Please login immediately to verify your identity: http://verify-login.secure-check.xyz
+Failure to do so will result in account suspension.
+",http://verify-login.secure-check.xyz,Phishing (by ML),58.3,Phishing (by VirusTotal)
+2025-07-14 10:40:31.870483,"Subject: Urgent! Your Account Has Been Suspended
+
+Dear Customer,
+
+We noticed suspicious activity in your account and have temporarily suspended access for your protection.
+
+To restore access, please verify your account immediately by clicking the link below:
+
+👉 [Verify My Account](http://secure-banking-login.verifysite.ru/login)
+
+If you do not complete this verification within 24 hours, your account will be permanently locked.
+
+Thank you for your prompt attention.
+
+Sincerely,  
+The Security Team  
+XYZ Bank  
+",http://secure-banking-login.verifysite.ru/login,Phishing (by ML),56.2,Phishing (by VirusTotal)
+2025-07-14 10:40:32.755237,"Subject: Urgent! Your Account Has Been Suspended
+
+Dear Customer,
+
+We noticed suspicious activity in your account and have temporarily suspended access for your protection.
+
+To restore access, please verify your account immediately by clicking the link below:
+
+👉 [Verify My Account](http://secure-banking-login.verifysite.ru/login)
+
+If you do not complete this verification within 24 hours, your account will be permanently locked.
+
+Thank you for your prompt attention.
+
+Sincerely,  
+The Security Team  
+XYZ Bank  
+",http://secure-banking-login.verifysite.ru/login,Phishing (by ML),56.2,Phishing (by VirusTotal)
+2025-07-25 16:30:04.248580,"""Dear user, your account has been suspended. Please verify your identity by clicking this link: http://malicious-site.com/login""","http://malicious-site.com/login""",Phishing (by ML),60.26,Phishing (by VirusTotal)
+2025-07-28 12:16:24.546236,,https://www.ilovepdf.com/download/1m9jxnz8tdrd4ksl79bc55gshzjs77Ashz1b9j0nm491Al5tn63w2chycrv0xrsfdg9788q2twcm968g27A4wrthwjgzr53ybt9wbf6tdr8ywqt5jf4d1r8jqrclhz5jrzAgAtzj7xwgyr8c74zmjbqqqs22mktkjbgkbq9lxc3sk47vx7hq/56w,No email content provided,N/A,Safe (by VirusTotal)
+2025-07-28 12:17:03.437646,"Your account has been temporarily suspended due to suspicious activity.
+Please login immediately to verify your identity: http://secure-verify-login.com
+Failure to act will result in account termination.
+",http://secure-verify-login.com,Phishing (by ML),58.61,Phishing (by VirusTotal)

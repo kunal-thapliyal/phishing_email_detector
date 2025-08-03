@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phishing Email Detector</title>
+    <style>
+        body { font-family: Arial; margin: 40px; background-color: #f7f9fc; }
+        textarea, input { width: 100%; padding: 10px; margin-top: 10px; font-size: 16px; }
+        button { padding: 10px 20px; font-size: 16px; margin-top: 20px; cursor: pointer; background-color: #007bff; color: white; border: none; border-radius: 5px; }
+        .result { margin-top: 30px; padding: 15px; font-size: 18px; border-radius: 5px; }
+        .result.safe { background-color: #d4edda; color: #155724; }
+        .result.phishing { background-color: #f8d7da; color: #721c24; }
+        .result.skipped { background-color: #fff3cd; color: #856404; }
+        .result.unknown { background-color: #d1ecf1; color: #0c5460; }
+    </style>
+</head>
+<body>
+    <h2>Phishing Email & URL Detection</h2>
+
+    <form method="POST">
+        <label>Email Content (optional):</label><br>
+        <textarea name="email_content" placeholder="Paste email content here..." rows="8"></textarea><br>
+
+        <label>URL (optional):</label><br>
+        <input type="text" name="url" placeholder="Paste a URL here (e.g., http://example.com)" /><br>
+
+        <button type="submit">Check</button>
+    </form>
+
+    {% if result_ml %}
+    <div class="result {{ 'safe' if result_ml == 'Safe (by ML)' else 'phishing' if result_ml == 'Phishing (by ML)' else 'skipped' }}">
+        <p><strong>ML Result:</strong> {{ result_ml }}</p>
+        {% if confidence and confidence != 'N/A' %}
+            <p><strong>Confidence:</strong> {{ confidence }}%</p>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    {% if result_vt %}
+    <div class="result {{ 'safe' if result_vt == 'Safe (by VirusTotal)' else 'phishing' if result_vt == 'Phishing (by VirusTotal)' else 'unknown' }}">
+        <p><strong>VirusTotal Result:</strong> {{ result_vt }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
