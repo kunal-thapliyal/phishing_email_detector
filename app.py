@@ -55,7 +55,7 @@ def index():
         else:
             result_vt = "No URL provided"
 
-        # Save to CSV
+        
         log_path = os.path.join(log_dir, "email_log.csv")
         write_header = not os.path.exists(log_path)
         with open(log_path, "a", newline='', encoding="utf-8") as csvfile:

@@ -74,3 +74,6 @@ XYZ Bank
 Please login immediately to verify your identity: http://secure-verify-login.com
 Failure to act will result in account termination.
 ",http://secure-verify-login.com,Phishing (by ML),58.61,Phishing (by VirusTotal)
+2025-08-03 13:20:07.204500,,https://www.youtube.com/watch?v=U0d43eaoD-s,No email content provided,N/A,Safe (by VirusTotal)
+2025-08-03 13:20:21.949036,"https://www.youtube.com/watch?v=U0d43eaoD-s
+",https://www.youtube.com/watch?v=U0d43eaoD-s,Phishing (by ML),57.65,Safe (by VirusTotal)
