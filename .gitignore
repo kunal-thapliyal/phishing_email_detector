@@ -11,3 +11,4 @@ dist/
 *.log
 *.png
 .vscode/
+phishing_email.csv
