@@ -31,4 +31,4 @@ plt.tight_layout()
 plt.savefig("vt_bar_chart.png")
 plt.close()
 
-print("✅ Charts saved as ml_bar_chart.png and vt_bar_chart.png")
+print(" Charts saved as ml_bar_chart.png and vt_bar_chart.png")
