@@ -42,4 +42,4 @@ plt.tight_layout()
 plt.savefig("ml_vs_vt_bar.png")
 plt.close()
 
-print("✅ Charts created: ml_pie_chart.png, vt_pie_chart.png, ml_vs_vt_bar.png")
+print(" Charts created: ml_pie_chart.png, vt_pie_chart.png, ml_vs_vt_bar.png")
